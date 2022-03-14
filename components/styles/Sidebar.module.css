@@ -1,0 +1,19 @@
+.sidebar {
+  background-color: #f6f7f8;
+  width: 17vw;
+  padding: 30px 20px;
+  position: fixed;
+  border-radius: 0 30px 30px 0;
+  filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.12));
+}
+
+.sidebar .title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sidebar .title img {
+  margin-right: 15px;
+}

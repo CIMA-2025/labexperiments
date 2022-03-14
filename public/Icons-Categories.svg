@@ -1,0 +1,7 @@
+<svg id="Icons_Categories" data-name="Icons/Categories" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <rect id="bg" width="32" height="32" fill="none"/>
+  <path id="search" d="M97.966,308.308a1.325,1.325,0,0,1-.94-.39L94.7,305.593a6.882,6.882,0,1,1,1.88-1.882l2.324,2.325a1.33,1.33,0,0,1-.94,2.271Zm-7.093-12.645a4.216,4.216,0,1,0,2.978,7.2l0,0h0a4.216,4.216,0,0,0-2.98-7.2Z" transform="translate(-67.614 -276.871)" fill="#222"/>
+  <path id="Rectangle_285_-_Outline" data-name="Rectangle 285 - Outline" d="M2.659,2.659v7.977h7.977V2.659H2.659M2.659,0h7.977a2.659,2.659,0,0,1,2.659,2.659v7.977a2.659,2.659,0,0,1-2.659,2.659H2.659A2.659,2.659,0,0,1,0,10.635V2.659A2.659,2.659,0,0,1,2.659,0Z" transform="translate(1.761 16.366)" fill="#222"/>
+  <path id="Rectangle_286_-_Outline" data-name="Rectangle 286 - Outline" d="M2.659,2.659v7.977h7.977V2.659H2.659M2.659,0h7.977a2.659,2.659,0,0,1,2.659,2.659v7.977a2.659,2.659,0,0,1-2.659,2.659H2.659A2.659,2.659,0,0,1,0,10.635V2.659A2.659,2.659,0,0,1,2.659,0Z" transform="translate(1.761 1.73)" fill="#222"/>
+  <path id="Rectangle_287_-_Outline" data-name="Rectangle 287 - Outline" d="M2.659,2.659v7.977h7.977V2.659H2.659M2.659,0h7.977a2.659,2.659,0,0,1,2.659,2.659v7.977a2.659,2.659,0,0,1-2.659,2.659H2.659A2.659,2.659,0,0,1,0,10.635V2.659A2.659,2.659,0,0,1,2.659,0Z" transform="translate(16.385 1.73)" fill="#222"/>
+</svg>
