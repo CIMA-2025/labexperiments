@@ -1,5 +1,10 @@
 import styles from "./styles/Content.module.css";
-import { LearningContent } from "./components";
+import { 
+    LearningContent, 
+    RecommendationsContent ,
+    CategoriesContent,
+    ExpertsContent
+} from "./components";
 
 export default function Content() {
     return(
@@ -7,6 +12,9 @@ export default function Content() {
             <div className={styles.content}>
                 <img src="samurai.svg" alt="samurai"/>
                 <LearningContent />
+                <RecommendationsContent />
+                <CategoriesContent />
+                <ExpertsContent />
             </div>
         </>
     )

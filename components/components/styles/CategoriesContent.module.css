@@ -1,0 +1,11 @@
+.categories {
+  background-image: url("/blackCircle.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
