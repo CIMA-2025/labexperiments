@@ -34,7 +34,7 @@ export default function ExpertsContent(){
                 <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 2, sm: 8, md: 12 }}>
                     {experts.map((experts, index) => (
                         <Grid item xs={2} sm={4} md={4} key={index}>
-                            <div>
+                            <div className={expertsStyles.content}>
                                 <div className={expertsStyles.image}>
                                     <img src={experts.image} alt={experts.name} />
                                 </div>
