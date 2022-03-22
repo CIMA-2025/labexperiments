@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="62" height="62" viewBox="0 0 62 62">
+  <g id="Shapes_02_Chevrones" data-name="Shapes/02 Chevrones" transform="translate(62 62) rotate(180)">
+    <rect id="bg" width="62" height="62" fill="none"/>
+    <g id="Shapes_01_Chevron" data-name="Shapes/01 Chevron" transform="translate(4.133)">
+      <path id="Vector" d="M385.225,64.4c25.721-37.295,44.583-16.89,4.716,9.088a1.765,1.765,0,0,0,0,3c39.953,26.063,21.091,46.383-4.716,9.088a18.834,18.834,0,0,1,0-21.177Z" transform="translate(-381.967 -44)" fill="#fdaebe"/>
+    </g>
+    <g id="Shapes_01_Chevron-2" data-name="Shapes/01 Chevron" transform="translate(26.867)">
+      <path id="Vector-2" data-name="Vector" d="M385.225,64.4c25.721-37.295,44.583-16.89,4.716,9.088a1.765,1.765,0,0,0,0,3c39.953,26.063,21.091,46.383-4.716,9.088a18.834,18.834,0,0,1,0-21.177Z" transform="translate(-381.967 -44)" fill="#fdaebe"/>
+    </g>
+  </g>
+</svg>

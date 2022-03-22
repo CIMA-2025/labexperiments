@@ -9,17 +9,17 @@ const experts = [
     {
         name: "Juan Perez",
         description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam",
-        image: "https://cdn.pixabay.com/photo/2016/11/18/19/07/happy-1836445__340.jpg"
+        image: "/experts/01.svg"
     },
     {
         name: "Juana Mala",
         description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam",
-        image: "https://cdn.pixabay.com/photo/2020/01/24/08/43/redhead-4789668__340.jpg"
+        image: "/experts/02.svg"
     },
     {
         name: "Juanito chiquito",
         description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam",
-        image: "https://cdn.pixabay.com/photo/2017/11/06/13/45/cap-2923682__340.jpg"
+        image: "/experts/03.svg"
     },
 ]
 
