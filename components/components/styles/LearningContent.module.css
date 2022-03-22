@@ -12,6 +12,7 @@
   padding: 15px;
   border-radius: 40px;
   cursor: pointer;
+  position: relative;
 }
 
 .component:hover {
@@ -30,6 +31,13 @@
   height: 30px;
   border-radius: 50%;
   padding: 3px;
+}
+
+.bookmark {
+  position: absolute;
+  z-index: 1;
+  top: -4px;
+  right: 14px;
 }
 
 /*Tiempo y modulos*/
@@ -82,7 +90,6 @@
 /*INICIA BLACK*/
 .black {
   background-color: #222222;
-  position: relative;
   color: white;
 
   display: flex;
@@ -107,7 +114,6 @@
 .blue {
   background-color: #0000af;
   color: white;
-  position: relative;
 
   display: flex;
   flex-direction: column;

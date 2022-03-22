@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styles from "../styles/Content.module.css";
 import stylesLearning from "./styles/LearningContent.module.css";
 import * as md from "react-icons/md";
@@ -6,6 +7,12 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 
 export default function LearningContent() {
+    const [active, setActive] = useState(false);
+
+    const handleClick = () => {
+        setActive(!active);
+    }
+
     return (
         <div className={styles.container}>
             <div className={styles.title}>
@@ -21,6 +28,11 @@ export default function LearningContent() {
                         <Grid item xs={2} sm={4} md={4} key={index}>
                             {data.template === "gray" && (
                                 <div className={stylesLearning.component + " " + stylesLearning.gray}>
+                                    <img 
+                                        className={stylesLearning.bookmark} 
+                                        onClick={handleClick} 
+                                        src={active == true ? ('/learning/Icons-Bookmark-blue.svg') : ('/learning/Icons-Bookmark.svg')} 
+                                    />
                                     <div className={stylesLearning.image}>
                                         <img src={data.image} alt={data.title} />
                                     </div>
@@ -35,6 +47,11 @@ export default function LearningContent() {
                             )}
                             {data.template === "white" && (
                                 <div className={stylesLearning.component + " " + stylesLearning.white}>
+                                    <img 
+                                        className={stylesLearning.bookmark} 
+                                        onClick={handleClick} 
+                                        src={active == true ? ('/learning/Icons-Bookmark-blue.svg') : ('/learning/Icons-Bookmark.svg')} 
+                                    />
                                     <div className={stylesLearning.image}>
                                         <img src={data.image} alt={data.title} />
                                     </div>
@@ -55,6 +72,11 @@ export default function LearningContent() {
                             )}
                             {data.template === "black" && (
                                 <div className={stylesLearning.component + " " + stylesLearning.black}>
+                                    <img 
+                                        className={stylesLearning.bookmark} 
+                                        onClick={handleClick} 
+                                        src={active == true ? ('/learning/Icons-Bookmark-blue.svg') : ('/learning/Icons-Bookmark.svg')} 
+                                    />
                                     <div className={stylesLearning.image}>
                                         <img src={data.image} alt={data.title} />
                                     </div>
@@ -70,6 +92,11 @@ export default function LearningContent() {
                             )}
                             {data.template === "blue" && (
                                 <div className={stylesLearning.component + " " + stylesLearning.blue}>
+                                    <img 
+                                        className={stylesLearning.bookmark} 
+                                        onClick={handleClick} 
+                                        src={active == true ? ('/learning/Icons-Bookmark-blue.svg') : ('/learning/Icons-Bookmark.svg')} 
+                                    />
                                     <img className={stylesLearning.flower} src="/pink-flowers.svg" alt="flowers" />
                                     <div className={stylesLearning.imageContainer}>
                                         <img src={data.image} alt={data.title} />
