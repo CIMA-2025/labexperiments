@@ -1,6 +1,7 @@
 import styles from "../styles/Content.module.css";
 import * as md from "react-icons/md";
 
+import Box from '@mui/material/Box';
 
 const data = [
     {
@@ -46,6 +47,21 @@ export default function RecommendationsContent(){
                     <md.MdArrowForwardIos/>
                 </a>
             </div>
+            <Box sx={{ flexGrow: 1 }}>
+                    {/* {data.map((item, index) => (
+                        <div key={index}>
+                            <div className={styles.content}>
+                                <div className={styles.image}>
+                                    <img src={item.image} alt={item.title} />
+                                </div>
+                                <div className={styles.info}>
+                                    <h3>{item.title}</h3>
+                                    <p>{item.time}</p>
+                                </div>
+                            </div>
+                        </div>
+                    ))} */}
+            </Box>
         </div>
     )
 }

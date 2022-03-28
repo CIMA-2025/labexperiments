@@ -6,6 +6,8 @@ import * as md from "react-icons/md";
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 
+import { Blue, Gray, White, Black } from "./components";
+
 export default function LearningContent() {
     const [active, setActive] = useState(false);
 
@@ -27,88 +29,32 @@ export default function LearningContent() {
                     {data.map((data, index) => (
                         <Grid item xs={2} sm={4} md={4} key={index}>
                             {data.template === "gray" && (
-                                <div className={stylesLearning.component + " " + stylesLearning.gray}>
-                                    <img 
-                                        className={stylesLearning.bookmark} 
-                                        onClick={handleClick} 
-                                        src={active == true ? ('/learning/Icons-Bookmark-blue.svg') : ('/learning/Icons-Bookmark.svg')} 
-                                    />
-                                    <div className={stylesLearning.image}>
-                                        <img src={data.image} alt={data.title} />
-                                    </div>
-                                    <div className={stylesLearning.content}>
-                                        <h3>{data.title}</h3>
-                                        <div className={stylesLearning.bottom}>
-                                            <img className={stylesLearning.iconPink} src="/Icons-Lecture.svg" alt="time" />
-                                            <span>{data.time}</span>
-                                        </div>
-                                    </div>
-                                </div>
+                                <Gray
+                                    handleClick={handleClick}
+                                    active={active}
+                                    data={data}
+                                />
                             )}
                             {data.template === "white" && (
-                                <div className={stylesLearning.component + " " + stylesLearning.white}>
-                                    <img 
-                                        className={stylesLearning.bookmark} 
-                                        onClick={handleClick} 
-                                        src={active == true ? ('/learning/Icons-Bookmark-blue.svg') : ('/learning/Icons-Bookmark.svg')} 
-                                    />
-                                    <div className={stylesLearning.image}>
-                                        <img src={data.image} alt={data.title} />
-                                    </div>
-                                    <div className={stylesLearning.content}>
-                                        <h3>{data.title}</h3>
-                                        <div className={stylesLearning.bottom}>
-                                            <div>
-                                                <img className={stylesLearning.iconPink} src="/Icons-Lecture.svg" alt="time" />
-                                                <span>Módulos: {data.modules}</span>
-                                            </div>
-                                            <div>
-                                                <img className={stylesLearning.iconPink} src="/Icons-Clock.svg" alt="time" />
-                                                <span>{data.time}</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <White
+                                    handleClick={handleClick}
+                                    active={active}
+                                    data={data}
+                                />
                             )}
                             {data.template === "black" && (
-                                <div className={stylesLearning.component + " " + stylesLearning.black}>
-                                    <img 
-                                        className={stylesLearning.bookmark} 
-                                        onClick={handleClick} 
-                                        src={active == true ? ('/learning/Icons-Bookmark-blue.svg') : ('/learning/Icons-Bookmark.svg')} 
-                                    />
-                                    <div className={stylesLearning.image}>
-                                        <img src={data.image} alt={data.title} />
-                                    </div>
-                                    <div className={stylesLearning.content}>
-                                        <h3>{data.title}</h3>
-                                        <p>{data.description}</p>
-                                        <div className={stylesLearning.bottom}>
-                                            <img className={stylesLearning.iconPink} src="/Icons-Clock.svg" alt="time" />
-                                            <span>{data.time}</span>
-                                        </div>
-                                    </div>
-                                </div>
+                                <Black
+                                    handleClick={handleClick}
+                                    active={active}
+                                    data={data}
+                                />
                             )}
                             {data.template === "blue" && (
-                                <div className={stylesLearning.component + " " + stylesLearning.blue}>
-                                    <img 
-                                        className={stylesLearning.bookmark} 
-                                        onClick={handleClick} 
-                                        src={active == true ? ('/learning/Icons-Bookmark-blue.svg') : ('/learning/Icons-Bookmark.svg')} 
-                                    />
-                                    <img className={stylesLearning.flower} src="/pink-flowers.svg" alt="flowers" />
-                                    <div className={stylesLearning.imageContainer}>
-                                        <img src={data.image} alt={data.title} />
-                                    </div>
-                                    <div className={stylesLearning.content}>
-                                        <h3>{data.title}</h3>
-                                        <div className={stylesLearning.bottom}>
-                                            <img className={stylesLearning.iconPink} src="/Icons-Lecture.svg" alt="time" />
-                                            <span>{data.time}</span>
-                                        </div>
-                                    </div>
-                                </div>
+                                <Blue
+                                    handleClick={handleClick}
+                                    active={active}
+                                    data={data}
+                                />
                             )}
                         </Grid>
                     ))}
