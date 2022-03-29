@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "../styles/Content.module.css";
+import styles from "../index/styles/Content.module.css";
 import stylesLearning from "./styles/LearningContent.module.css";
 import * as md from "react-icons/md";
 

@@ -1,4 +1,4 @@
-import styles from "../styles/Content.module.css";
+import styles from "../index/styles/Content.module.css";
 import categoryStyles from "./styles/CategoriesContent.module.css";
 
 import Box from '@mui/material/Box';

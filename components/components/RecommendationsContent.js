@@ -1,4 +1,4 @@
-import styles from "../styles/Content.module.css";
+import styles from "../index/styles/Content.module.css";
 import * as md from "react-icons/md";
 
 import Box from '@mui/material/Box';

@@ -4,7 +4,7 @@ import {
     RecommendationsContent ,
     CategoriesContent,
     ExpertsContent
-} from "./components";
+} from "../components";
 
 export default function Content() {
     return(
