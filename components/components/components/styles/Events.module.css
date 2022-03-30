@@ -1,0 +1,31 @@
+/*RecentlyViewed*/
+.container h2 {
+  margin: 0;
+}
+
+.container {
+  background-color: #f6f6f6;
+  border-radius: 24px;
+  padding: 25px;
+  width: 100%;
+}
+
+.recentlyViewed {
+  margin-right: 10px;
+}
+
+.seeMore {
+  color: #004aff;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.seeMore svg {
+  vertical-align: sub;
+  margin-left: 5px;
+}
+
+/*nextEvents*/
+.nextEvents {
+  margin-left: 10px;
+}

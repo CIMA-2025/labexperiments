@@ -1,21 +1,21 @@
-import stylesLearning from '../styles/LearningContent.module.css';
+import styles from './styles/Template.module.css';
 
 export default function Black({ handleClick, active, data }){
     return (
-        <div className={stylesLearning.component + " " + stylesLearning.black}>
+        <div className={styles.component + " " + styles.black}>
             <img 
-                className={stylesLearning.bookmark} 
+                className={styles.bookmark} 
                 onClick={handleClick} 
                 src={active == true ? ('/learning/Icons-Bookmark-blue.svg') : ('/learning/Icons-Bookmark.svg')} 
            />
-            <div className={stylesLearning.image}>
+            <div className={styles.image}>
                 <img src={data.image} alt={data.title} />
             </div>
-            <div className={stylesLearning.content}>
+            <div className={styles.content}>
                 <h3>{data.title}</h3>
                 <p>{data.description}</p>
-                <div className={stylesLearning.bottom}>
-                    <img className={stylesLearning.iconPink} src="/Icons-Clock.svg" alt="time" />
+                <div className={styles.bottom}>
+                    <img className={styles.iconPink} src="/Icons-Clock.svg" alt="time" />
                     <span>{data.time}</span>
                 </div>
             </div>

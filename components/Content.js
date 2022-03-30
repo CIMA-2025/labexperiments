@@ -3,7 +3,8 @@ import {
     LearningContent, 
     RecommendationsContent ,
     CategoriesContent,
-    ExpertsContent
+    ExpertsContent,
+    EventsContent,
 } from "./components";
 
 export default function Content() {
@@ -13,6 +14,7 @@ export default function Content() {
                 <img src="samurai.svg" alt="samurai"/>
                 <LearningContent />
                 <RecommendationsContent />
+                <EventsContent />
                 <CategoriesContent />
                 <ExpertsContent />
             </div>

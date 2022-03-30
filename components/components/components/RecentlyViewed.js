@@ -1,13 +1,12 @@
 import { useState } from "react";
-import styles from "../styles/Content.module.css";
+import styles from "./styles/Events.module.css"
 import * as md from "react-icons/md";
 
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
+import { Blue, Gray, White, Black } from "./";
 
-import { Blue, Gray, White, Black } from "./components";
-
-export default function LearningContent() {
+export default function RecentlyViewed(){
     const [active, setActive] = useState(false);
 
     const handleClick = () => {
@@ -15,16 +14,11 @@ export default function LearningContent() {
     }
 
     return (
-        <div className={styles.container}>
-            <div className={styles.title}>
-                <h2>Experiencias de Aprendizaje</h2>
-                <a href="#" className={styles.seeMore}>
-                    Ver más
-                    <md.MdArrowForwardIos />
-                </a>
-            </div>
-            <Box sx={{ flexGrow: 1 }}>
-                <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 16 }}>
+        <>
+            <div className={styles.container + " " + styles.recentlyViewed}>
+                <h2>Vistos recientemente</h2>
+                <Box sx={{ flexGrow: 1 }}>
+                <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 8 }}>
                     {data.map((data, index) => (
                         <Grid item xs={2} sm={4} md={4} key={index}>
                             {data.template === "gray" && (
@@ -59,7 +53,13 @@ export default function LearningContent() {
                     ))}
                 </Grid>
             </Box>
-        </div>
+                <a href="#" className={styles.seeMore}>
+                    Ver más
+                    <md.MdArrowForwardIos />
+                </a>
+            </div>
+        </>
+
     )
 }
 
