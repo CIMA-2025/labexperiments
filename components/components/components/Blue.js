@@ -15,7 +15,7 @@ export default function Blue({ handleClick, active, data }){
             <div className={styles.content}>
                 <h3>{data.title}</h3>
                 <div className={styles.bottom}>
-                    <img className={styles.iconPink} src="/Icons-Lecture.svg" alt="time" />
+                    <img className={styles.iconPink} src="/Icons-Clock.svg" alt="time" />
                     <span>{data.time}</span>
                 </div>
             </div>

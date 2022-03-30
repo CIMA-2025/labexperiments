@@ -26,7 +26,7 @@ export default function CarouselComponent({ data }){
         infinite: true,
         speed: 500,
         slidesToShow: 4,
-        slidesToScroll: 4,
+        slidesToScroll: 2,
         initialSlide: 0,
         autoplay: false,
         autoplaySpeed: 2500,
@@ -82,10 +82,16 @@ export default function CarouselComponent({ data }){
                       case "Slab":
                         return (
                           <div key={data.id} className={styles.container}>
+                            <div className={styles.label}>
+                              {/* TODO */}
+                            </div>
                             <img src={data.image} alt={data.title} />
                             <div className={styles.title}>
                               <h3>{data.title}</h3>
-                              <p>{data.time}</p>
+                              <div className={styles.bottom}>
+                                  <img src="/Icons-Clock.svg" alt="time" />
+                                  <span>{data.time}</span>
+                              </div>
                             </div>
                           </div>
                         )
@@ -95,7 +101,10 @@ export default function CarouselComponent({ data }){
                             <img src={data.image} alt={data.title} />
                             <div className={styles.title}>
                               <h3>{data.title}</h3>
-                              <p>{data.time}</p>
+                              <div className={styles.bottom}>
+                                  <img src="/Icons-Clock.svg" alt="time" />
+                                  <span>{data.time}</span>
+                              </div>
                             </div>
                           </div>
                         )
