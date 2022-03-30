@@ -1,34 +1,38 @@
-import styles from "../styles/Content.module.css";
+import styles from "../index/styles/Content.module.css";
 import * as md from "react-icons/md";
-
-import Box from '@mui/material/Box';
+import { CarouselComponent } from "./components";
 
 const data = [
     {
+        id: 1,
         type: "Bit",
         title: "¿Qué es una base de datos Relacional y qué es MySQL?",
         time: "8 min",
         image: "https://cdn.pixabay.com/photo/2020/01/24/08/43/redhead-4789668__340.jpg",
     },
     {
-        type: "Bit",
-        title: "¿Qué es una base de datos Relacional y qué es MySQL?",
+        id: 2,
+        type: "Slab",
+        title: "Agilidad",
         time: "8 min",
         image: "https://cdn.pixabay.com/photo/2020/01/24/08/43/redhead-4789668__340.jpg",
     },
     {
-        type: "Bit",
-        title: "¿Qué es una base de datos Relacional y qué es MySQL?",
+        id: 3,
+        type: "Deck",
+        title: "Base de Datos",
         time: "8 min",
         image: "https://cdn.pixabay.com/photo/2020/01/24/08/43/redhead-4789668__340.jpg",
     },
     {
-        type: "Bit",
-        title: "¿Qué es una base de datos Relacional y qué es MySQL?",
+        id: 4,
+        type: "Slab",
+        title: "Agilidad",
         time: "8 min",
         image: "https://cdn.pixabay.com/photo/2020/01/24/08/43/redhead-4789668__340.jpg",
     },
     {
+        id: 5,
         type: "Bit",
         title: "¿Qué es una base de datos Relacional y qué es MySQL?",
         time: "8 min",
@@ -47,21 +51,9 @@ export default function RecommendationsContent(){
                     <md.MdArrowForwardIos/>
                 </a>
             </div>
-            <Box sx={{ flexGrow: 1 }}>
-                    {/* {data.map((item, index) => (
-                        <div key={index}>
-                            <div className={styles.content}>
-                                <div className={styles.image}>
-                                    <img src={item.image} alt={item.title} />
-                                </div>
-                                <div className={styles.info}>
-                                    <h3>{item.title}</h3>
-                                    <p>{item.time}</p>
-                                </div>
-                            </div>
-                        </div>
-                    ))} */}
-            </Box>
+            <div className={styles.carousel}>
+                <CarouselComponent data={data}/>
+            </div>
         </div>
     )
 }

@@ -19,7 +19,7 @@
 .title .seeMore {
   color: #004aff;
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   font-weight: bold;
   justify-content: center;
   font-size: 17px;
@@ -27,4 +27,9 @@
 
 .title .seeMore svg {
   margin-left: 5px;
+}
+
+.container .carousel {
+  display: flex;
+  justify-content: center;
 }

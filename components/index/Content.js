@@ -5,7 +5,7 @@ import {
     CategoriesContent,
     ExpertsContent,
     EventsContent,
-} from "./components";
+} from "../components";
 
 export default function Content() {
     return(

@@ -1,0 +1,25 @@
+.carousel {
+  width: 96%;
+}
+
+.container {
+  padding: 20px;
+  margin: 0px 20px;
+  border-radius: 20px;
+  background-color: #ebe6d7;
+  height: auto;
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.carousel .title {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  background-color: red;
+}

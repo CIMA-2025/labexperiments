@@ -1,5 +1,7 @@
+import { Navbar } from "../components";
+
 export default function Account(){
     return (
-        <h2>Account</h2>
+        <Navbar />
     )
 }

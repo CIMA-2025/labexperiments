@@ -1,4 +1,4 @@
-import styles from "../styles/Content.module.css";
+import styles from "../index/styles/Content.module.css";
 import expertsStyles from "./styles/ExpertsContent.module.css";
 import * as md from "react-icons/md";
 
