@@ -29,7 +29,7 @@ export default function CarouselComponent({ data }){
         slidesToScroll: 2,
         initialSlide: 0,
         autoplay: false,
-        autoplaySpeed: 2500,
+        autoplaySpeed: 2000,
         pauseOnHover: true,
         nextArrow: <RightArrow />,
         prevArrow: <LeftArrow />,
@@ -71,21 +71,33 @@ export default function CarouselComponent({ data }){
                     switch(data.type){
                       case "Bit":
                         return (
-                          <div key={data.id} className={styles.container}>
-                            <img src={data.image} alt={data.title} />
+                          <div key={data.id} className={styles.container + " " + styles.bit }>
+                            <div className={styles.type}>
+                              <div className={styles.label}>
+                                <md.MdArrowForwardIos />
+                                <span>Bit</span>
+                              </div>
+                            </div>
                             <div className={styles.title}>
                               <h3>{data.title}</h3>
-                              <p>{data.time}</p>
+                              <img src={data.image} alt={data.title} />
+                            </div>
+                            <div className={styles.bottom}>
+                              <img src="/Icons-Clock.svg" alt="time" />
+                              <span>{data.time}</span>
                             </div>
                           </div>  
                         )
                       case "Slab":
                         return (
-                          <div key={data.id} className={styles.container}>
-                            <div className={styles.label}>
-                              {/* TODO */}
+                          <div key={data.id} className={styles.container + " " + styles.slab}>
+                             <div className={styles.type}>
+                              <div className={styles.label}>
+                                <md.MdArrowForwardIos />
+                                <span>Slab</span>
+                              </div>
                             </div>
-                            <img src={data.image} alt={data.title} />
+                            <img className={styles.image} src={data.image} alt={data.title} />
                             <div className={styles.title}>
                               <h3>{data.title}</h3>
                               <div className={styles.bottom}>
@@ -97,8 +109,14 @@ export default function CarouselComponent({ data }){
                         )
                       case "Deck":
                         return (
-                          <div key={data.id} className={styles.container}>
-                            <img src={data.image} alt={data.title} />
+                          <div key={data.id} className={styles.container + " " + styles.deck}>
+                            <div className={styles.type}>
+                              <div className={styles.label}>
+                                <md.MdArrowForwardIos />
+                                <span>Deck</span>
+                              </div>
+                            </div>
+                            <img className={styles.image} src={data.image} alt={data.title} />
                             <div className={styles.title}>
                               <h3>{data.title}</h3>
                               <div className={styles.bottom}>

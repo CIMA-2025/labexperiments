@@ -3,7 +3,6 @@ import * as md from "react-icons/md";
 import { CarouselComponent } from "./components";
 
 import Box from '@mui/material/Box';
-import { Recomendation } from "./components";
 
 const data = [
     {
@@ -11,7 +10,7 @@ const data = [
         type: "Bit",
         title: "¿Qué es una base de datos Relacional y qué es MySQL?",
         time: "8 min",
-        image: "https://cdn.pixabay.com/photo/2020/01/24/08/43/redhead-4789668__340.jpg",
+        image: "/recommendations/FOTOS-02.svg",
     },
     {
         id: 2,
@@ -39,7 +38,7 @@ const data = [
         type: "Bit",
         title: "¿Qué es una base de datos Relacional y qué es MySQL?",
         time: "8 min",
-        image: "https://cdn.pixabay.com/photo/2020/01/24/08/43/redhead-4789668__340.jpg",
+        image: "/recommendations/FOTOS-02.svg",
     },
     {
         id: 2,
@@ -79,9 +78,6 @@ export default function RecommendationsContent() {
             <div className={styles.carousel}>
                 <CarouselComponent data={data} />
             </div>
-            <Box sx={{ flexGrow: 1 }}>
-                <Recomendation />
-            </Box>
         </div>
     )
 }
