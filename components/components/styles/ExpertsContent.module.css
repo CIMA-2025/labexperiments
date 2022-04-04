@@ -32,3 +32,17 @@
 .content {
   width: 60%;
 }
+
+.contentBreakpoint { 
+  background-color: red;
+  display: flex;
+  flex-direction: row;
+}
+
+.contentBreakpoint .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
