@@ -4,7 +4,8 @@ import * as md from "react-icons/md";
 
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import { Blue, Gray, White, Black } from "./";
+import { BlueLittle, GrayLittle, WhiteLittle, BlackLittle } from "./little";
+import { Black, Gray, White, Blue } from "./";
 
 export default function RecentlyViewed(){
     const [active, setActive] = useState(false);
@@ -18,7 +19,15 @@ export default function RecentlyViewed(){
             <div className={styles.container + " " + styles.recentlyViewed}>
                 <h2>Vistos recientemente</h2>
                 <Box sx={{ flexGrow: 1 }}>
-                <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 8 }}>
+                <Grid 
+                    container spacing={{ xs: 2, md: 3 }} 
+                    columns={{ xs: 4, sm: 8, md: 10 }}
+                    sc={{
+                        display: "flex",
+                        alignContent: "center",
+                        justifyContent: "center",
+                    }}
+                >
                     {data.map((data, index) => (
                         <Grid item xs={2} sm={4} md={4} key={index}>
                             {data.template === "gray" && (
@@ -26,20 +35,23 @@ export default function RecentlyViewed(){
                                     handleClick={handleClick}
                                     active={active}
                                     data={data}
-                                />
-                            )}
+                                    little={true}
+                                    />
+                                    )}
                             {data.template === "white" && (
                                 <White
-                                    handleClick={handleClick}
-                                    active={active}
-                                    data={data}
+                                handleClick={handleClick}
+                                active={active}
+                                data={data}
+                                little={true}
                                 />
-                            )}
+                                )}
                             {data.template === "black" && (
                                 <Black
                                     handleClick={handleClick}
                                     active={active}
                                     data={data}
+                                    little={true}
                                 />
                             )}
                             {data.template === "blue" && (
@@ -47,6 +59,7 @@ export default function RecentlyViewed(){
                                     handleClick={handleClick}
                                     active={active}
                                     data={data}
+                                    little={true}
                                 />
                             )}
                         </Grid>

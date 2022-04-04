@@ -28,4 +28,73 @@
 /*nextEvents*/
 .nextEvents {
   margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.nextEvents h2 {
+  margin-bottom: 15px;
+}
+
+.event {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.event .date {
+  background-color: #004AFF;
+  color: white;
+  height: auto;
+  border-radius: 16px;
+  margin: 0;
+
+  margin-right: 20px;
+  padding: 12px 10px;
+  text-align: center;
+}
+
+.event .date h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.event .date .day {
+  font-size: 24px;
+}
+
+.content h3 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.content p {
+  margin: 0;
+  font-size: 16px;
+  color: #696A6D;
+}
+
+/*Conferences*/
+.conference {
+  background-color: #EBEBEA;
+  padding: 15px;
+  border-radius: 16px;
+}
+
+.conference .date {
+  color: #004DFF;
+  font-weight: bold;
+}
+
+.conference h3 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.conference p {
+  margin: 0;
+  font-size: 16px;
+  color: #696A6D;
+  font-weight: bold;
 }

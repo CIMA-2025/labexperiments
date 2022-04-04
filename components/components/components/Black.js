@@ -1,8 +1,8 @@
 import styles from './styles/Template.module.css';
 
-export default function Black({ handleClick, active, data }){
+export default function Black({ handleClick, active, data, little }){
     return (
-        <div className={styles.component + " " + styles.black}>
+        <div className={little ? styles.componentLittle + " " + styles.black : styles.component + " " + styles.black}>
             <img 
                 className={styles.bookmark} 
                 onClick={handleClick} 

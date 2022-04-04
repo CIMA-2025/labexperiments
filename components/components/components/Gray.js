@@ -1,8 +1,8 @@
 import styles from './styles/Template.module.css';
 
-export default function Gray({ handleClick, active, data }){
+export default function Gray({ handleClick, active, data, little }){
     return (
-        <div className={styles.component + " " + styles.gray}>
+        <div className={little ? styles.componentLittle + " " + styles.gray : styles.component + " " + styles.gray}>
             <img 
                 className={styles.bookmark} 
                 onClick={handleClick} 
