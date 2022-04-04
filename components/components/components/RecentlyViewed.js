@@ -4,7 +4,6 @@ import * as md from "react-icons/md";
 
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import { BlueLittle, GrayLittle, WhiteLittle, BlackLittle } from "./little";
 import { Black, Gray, White, Blue } from "./";
 
 export default function RecentlyViewed(){
