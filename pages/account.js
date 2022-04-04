@@ -1,7 +1,13 @@
 import { Navbar } from "../components/index";
+import { CoverImage, Bio } from "../components/profile";
 
-export default function Account(){
+export default function Biographic() {
     return (
-        <Navbar />
+        <>
+            <Navbar />
+            <CoverImage />
+            <Bio />
+        </>
+
     )
 }

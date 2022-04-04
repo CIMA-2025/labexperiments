@@ -1,0 +1,24 @@
+.container{
+    background-color: transparent;
+    width: 428px;
+    position: absolute;
+    left: 10%;
+    top: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.image{
+    width: 60%;
+    margin: auto;
+}
+
+.name{
+    margin: auto;
+    font-size: 25px;
+}
+
+.bio{
+    margin-top: 0;
+    text-align: center;
+}

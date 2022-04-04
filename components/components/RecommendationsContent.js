@@ -2,6 +2,9 @@ import styles from "../index/styles/Content.module.css";
 import * as md from "react-icons/md";
 import { CarouselComponent } from "./components";
 
+import Box from '@mui/material/Box';
+import { Recomendation } from "./components";
+
 const data = [
     {
         id: 1,
@@ -59,23 +62,26 @@ const data = [
         time: "8 min",
         image: "/recommendations/FOTOS-06.svg",
     },
-    
+
 ];
 
 
-export default function RecommendationsContent(){
+export default function RecommendationsContent() {
     return (
         <div className={styles.container}>
             <div className={styles.title}>
                 <h2>Recomendaciones para ti</h2>
                 <a href="#" className={styles.seeMore}>
                     Ver más
-                    <md.MdArrowForwardIos/>
+                    <md.MdArrowForwardIos />
                 </a>
             </div>
             <div className={styles.carousel}>
-                <CarouselComponent data={data}/>
+                <CarouselComponent data={data} />
             </div>
+            <Box sx={{ flexGrow: 1 }}>
+                <Recomendation />
+            </Box>
         </div>
     )
 }

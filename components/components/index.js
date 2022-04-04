@@ -4,9 +4,9 @@ import RecommendationsContent from "./RecommendationsContent";
 import ExpertsContent from "./ExpertsContent";
 import EventsContent from "./EventsContent";
 
-export { 
-    LearningContent, 
-    CategoriesContent, 
+export {
+    LearningContent,
+    CategoriesContent,
     RecommendationsContent,
     ExpertsContent,
     EventsContent,
