@@ -21,7 +21,7 @@ export default function RecentlyViewed(){
                 <Grid 
                     container spacing={{ xs: 2, md: 3 }} 
                     columns={{ xs: 4, sm: 8, md: 10 }}
-                    sc={{
+                    sx={{
                         display: "flex",
                         alignContent: "center",
                         justifyContent: "center",
