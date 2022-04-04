@@ -7,7 +7,7 @@ import Grid from '@mui/material/Grid';
 
 import { Blue, Gray, White, Black } from "./components";
 
-export default function LearningContent({littles}) {
+export default function LearningContent({data, littles}) {
     const [active, setActive] = useState(false);
 
     const handleClick = () => {
@@ -68,31 +68,3 @@ export default function LearningContent({littles}) {
 }
 
 
-const data = [
-    {
-        template: 'gray',
-        title: "Fundamentos de Scrum",
-        time: "8 min",
-        image: "/learning/gray.svg",
-    },
-    {
-        template: 'white',
-        title: "Conceptos básicos del marketing digital",
-        modules: "16",
-        time: "8 min",
-        image: "/learning/white.svg",
-    },
-    {
-        template: 'black',
-        title: "Fundamentos de Scrum",
-        description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.",
-        time: "8 hrs",
-        image: "/learning/black.svg",
-    },
-    {
-        template: 'blue',
-        title: "Fundamentos de Scrum",
-        time: "8 hrs",
-        image: "/learning/blue.svg",
-    },
-]
