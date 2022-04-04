@@ -1,4 +1,4 @@
 import CoverImage from "./coverImage";
-import Bio from "./bio"
+import Content from "./content"
 
-export { CoverImage, Bio }
+export { CoverImage, Content }

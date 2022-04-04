@@ -7,7 +7,7 @@ import Grid from '@mui/material/Grid';
 
 import { Blue, Gray, White, Black } from "./components";
 
-export default function LearningContent() {
+export default function LearningContent({littles}) {
     const [active, setActive] = useState(false);
 
     const handleClick = () => {
@@ -32,6 +32,7 @@ export default function LearningContent() {
                                     handleClick={handleClick}
                                     active={active}
                                     data={data}
+                                    little={littles}
                                 />
                             )}
                             {data.template === "white" && (
@@ -39,6 +40,7 @@ export default function LearningContent() {
                                     handleClick={handleClick}
                                     active={active}
                                     data={data}
+                                    little={littles}
                                 />
                             )}
                             {data.template === "black" && (
@@ -46,6 +48,7 @@ export default function LearningContent() {
                                     handleClick={handleClick}
                                     active={active}
                                     data={data}
+                                    little={littles}
                                 />
                             )}
                             {data.template === "blue" && (
@@ -53,6 +56,7 @@ export default function LearningContent() {
                                     handleClick={handleClick}
                                     active={active}
                                     data={data}
+                                    little={littles}
                                 />
                             )}
                         </Grid>

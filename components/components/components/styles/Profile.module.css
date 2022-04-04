@@ -1,0 +1,16 @@
+.image{
+    width: 60%;
+    margin: auto;
+}
+
+.name{
+    margin: auto;
+    font-size: 25px;
+}
+
+.bio{
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    font-size: 14px;
+}
