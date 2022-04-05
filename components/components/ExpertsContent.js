@@ -35,7 +35,7 @@ export default function ExpertsContent(){
                 <h2>Expertos</h2>
             </div>
             <Box sx={{ flexGrow: 1 }}>
-                <Grid container spacing={{ xs: 2, md: 3 }} columns={!isIpad ? {xs: 2, sm: 8, md: 12 } : {xs: 4, sm: 4, md: 4 }}>
+                <Grid container spacing={{ xs: 2, md: 3 }} columns={!isIpad ? {xs: 2, sm: 8, md: 12 } : {xs: 2, sm: 4, md: 4 }}>
                     {experts.map((experts, index) => (
                         <Grid item xs={2} sm={4} md={4} key={index}>
                             <div className={!isIpad ? expertsStyles.content : expertsStyles.contentBreakpoint}>
@@ -52,9 +52,9 @@ export default function ExpertsContent(){
                                         </a>
                                     </>
                                 ) : (
-                                    <div className={styles.text}>
-                                        <h3>{experts.name}</h3>
-                                        <p>{experts.description}</p>
+                                    <div className={expertsStyles.text}>
+                                        <h3 className={expertsStyles.name}>{experts.name}</h3>
+                                        <p className={expertsStyles.bio}>{experts.description}</p>
                                         <a href="#" className={expertsStyles.moreInfo}>
                                             Más info
                                             <md.MdArrowForwardIos />
