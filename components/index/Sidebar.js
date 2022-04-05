@@ -7,7 +7,7 @@ export default function Sidebar(){
 
     return (
         <>
-            <div className={styles.sidebar}>
+            <div className={styles.sidebar + " " + (isIpad && styles.movil)}>
                 <div className={styles.title}>
                     <img src="/sidebar/Icons-Book.svg" alt="Book"/>
                     <h3 className={isIpad && "invisible"}>Experiencias de Aprendizaje</h3>

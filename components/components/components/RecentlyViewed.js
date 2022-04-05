@@ -15,7 +15,7 @@ export default function RecentlyViewed(){
 
     return (
         <>
-            <div className={styles.container + " " + styles.recentlyViewed}>
+            <div className={styles.container + " " + styles.recentlyViewed }>
                 <h2>Vistos recientemente</h2>
                 <Box sx={{ flexGrow: 1 }}>
                 <Grid 

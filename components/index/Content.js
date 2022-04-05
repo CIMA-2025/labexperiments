@@ -6,11 +6,14 @@ import {
     ExpertsContent,
     EventsContent,
 } from "../components";
+import { useMediaQuery } from "../../common"
+
 
 export default function Content() {
+    const isIpad = useMediaQuery(1023);
     return(
         <>
-            <div className={styles.content}>
+            <div className={styles.content + " " + (isIpad && styles.movil)}>
                 <img src="samurai.svg" alt="samurai"/>
                 <LearningContent data={data}/>
                 <RecommendationsContent />
