@@ -6,6 +6,7 @@
 
 .componentLittle {
   height: 100%;
+  margin-left: 20px;
 }
 
 .component, .componentLittle {
@@ -70,7 +71,7 @@
   padding: 0;
 }
 
-.black .content, .blue .content, .gray .content, .white .content {
+.content {
   padding: 0px 15px 15px 15px;
 }
 
@@ -193,7 +194,3 @@
   left: 10px;
   width: 50px;
 }
-
-
-
-/*BLUE*/

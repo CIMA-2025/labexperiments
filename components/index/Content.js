@@ -14,7 +14,7 @@ export default function Content() {
     return(
         <>
             <div className={styles.content + " " + (isIpad && styles.movil)}>
-                <img src="samurai.svg" alt="samurai" className={styles.samurai}/>
+                <img src="samurai.svg" alt="samurai" className={(isIpad ? styles.samurai : "")}/>
                 <LearningContent data={data}/>
                 <RecommendationsContent />
                 <EventsContent />
