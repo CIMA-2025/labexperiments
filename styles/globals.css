@@ -18,3 +18,10 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.visible {
+  visibility: visible !important;
+}
+.invisible {
+  visibility: hidden !important;
+}
