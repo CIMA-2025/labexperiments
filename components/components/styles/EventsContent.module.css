@@ -3,3 +3,9 @@
   width: 100%;
   justify-content: space-between;
 }
+
+.mobile {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

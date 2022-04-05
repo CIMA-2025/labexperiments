@@ -6,6 +6,8 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import { Black, Gray, White, Blue } from "./";
 
+import { useMediaQuery } from '../../../common'
+
 export default function RecentlyViewed(){
     const [active, setActive] = useState(false);
 
@@ -13,9 +15,11 @@ export default function RecentlyViewed(){
         setActive(!active);
     }
 
+    const isIpad = useMediaQuery(1023);
+
     return (
         <>
-            <div className={styles.container + " " + styles.recentlyViewed }>
+            <div className={styles.container + " " + (isIpad ? styles.mobile : styles.recentlyViewed)}>
                 <h2>Vistos recientemente</h2>
                 <Box sx={{ flexGrow: 1 }}>
                 <Grid 

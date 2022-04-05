@@ -1,11 +1,14 @@
 import styles from "./styles/Events.module.css"
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-/* import { useMediaQuery } from "@common"; */
+
+import { useMediaQuery } from '../../../common'
 
 export default function NextEvents(){
+    const isIpad = useMediaQuery(1023);
+
     return(
-        <div className={styles.container + " " + styles.nextEvents}>
+        <div className={styles.container + " " + (isIpad ? styles.mobile : styles.nextEvents)}>
             <h2>Próximos eventos</h2>
             {data.filter(data => data.category === "Event").map(data => (
                 <div key={data.id} className={styles.event}>

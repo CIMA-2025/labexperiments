@@ -35,10 +35,10 @@ export default function CarouselComponent({ data }){
         prevArrow: <LeftArrow />,
         responsive: [
           {
-            breakpoint: 1024,
+            breakpoint: 1500,
             settings: {
-              slidesToShow: 3,
-              slidesToScroll: 3,
+              slidesToShow: 2,
+              slidesToScroll: 2,
               infinite: true,
               dots: true
             }
