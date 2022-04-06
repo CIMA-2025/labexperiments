@@ -1,6 +1,15 @@
 .image{
     width: 60%;
     margin: auto;
+    margin-bottom: 10%;
+}
+
+.text {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 0;
 }
 
 .name{
@@ -13,4 +22,10 @@
     width: 80%;
     margin: auto;
     font-size: 14px;
+}
+
+@media (max-width: 1023px) {
+    .image{
+        width: 80%;
+    }
 }

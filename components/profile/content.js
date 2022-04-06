@@ -2,16 +2,18 @@
 import styles from "./styles/content.module.css"
 import LearningContent from '../components/LearningContent'
 import  Profile  from "../components/components/Profile"
+import { useMediaQuery } from "../../common"
 
 export default function Content() {
 
+    const isIpad = useMediaQuery(1023)
     return (
-        <div className={styles.container}>
+        <div className={styles.container + " " + (isIpad && styles.movil)}>
             <div className={styles.profile}>
                 <Profile />
             </div>
             <div className={styles.learning}>
-                <LearningContent data={data} littles={true} />
+                <LearningContent data={data} littles={true} width={8} />
             </div>
         </div>
 

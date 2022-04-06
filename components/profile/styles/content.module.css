@@ -1,7 +1,11 @@
 .container{
     width: 100%;
     display: flex;
+}
 
+.movil {
+    display: flex;
+    flex-direction: column;
 }
 
 .profile{
@@ -15,8 +19,19 @@
     margin-top: -150px;
 }
 
-
 .learning {
     width: 50%;
     margin-left: 5%;
+}
+
+@media (max-width: 1023px) {
+    .profile{
+        width: 80%;
+        flex-direction: column;
+    }
+
+    .learning {
+        margin: auto;
+        width: 80%;
+    }
 }

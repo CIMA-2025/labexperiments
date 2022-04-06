@@ -10,7 +10,7 @@ import Slider from "react-slick";
 
 import { Blue, Gray, White, Black } from "./components";
 
-export default function LearningContent({data}) {
+export default function LearningContent({data, littles, width = 16}) {
     const isIpad = useMediaQuery(1023);
 
     const [active, setActive] = useState(false);
@@ -68,7 +68,7 @@ export default function LearningContent({data}) {
             </div>
             <Box sx={{ flexGrow: 1 }}>
                 {!isIpad ? (
-                    <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 16 }}>
+                    <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: width }}>
                         {data.map((data, index) => (
                             <Grid item xs={2} sm={4} md={4} key={index}>
                                 {data.template === "gray" && (
@@ -112,7 +112,7 @@ export default function LearningContent({data}) {
                                         handleClick={handleClick}
                                         active={active}
                                         data={data}
-                                        little={true}
+                                        little={littles}
                                     />
 
                                 )}
@@ -122,7 +122,7 @@ export default function LearningContent({data}) {
                                         handleClick={handleClick}
                                         active={active}
                                         data={data}
-                                        little={true}
+                                        little={littles}
                                     />
                                 )}
                                 {data.template === "black" && (
@@ -131,7 +131,7 @@ export default function LearningContent({data}) {
                                         handleClick={handleClick}
                                         active={active}
                                         data={data}
-                                        little={true}
+                                        little={littles}
                                     />
                                 )}
                                 {data.template === "blue" && (
@@ -140,7 +140,7 @@ export default function LearningContent({data}) {
                                         handleClick={handleClick}
                                         active={active}
                                         data={data}
-                                        little={true}
+                                        little={littles}
                                     />
                                 )}
                             </>
