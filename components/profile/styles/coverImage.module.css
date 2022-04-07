@@ -5,7 +5,8 @@
     z-index: 100;
 }
 
-.container .coverImage{
+
+.container .coverImage img{
     width: 100%;
     object-fit: cover;
     height: 60%;

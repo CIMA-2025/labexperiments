@@ -2,8 +2,6 @@ import styles from "../index/styles/Content.module.css";
 import * as md from "react-icons/md";
 import { CarouselComponent } from "./components";
 
-import Box from '@mui/material/Box';
-
 const data = [
     {
         id: 1,

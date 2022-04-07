@@ -1,6 +1,7 @@
 import styles from './styles/Template.module.css';
 
 export default function Blue({ handleClick, active, data, little }){
+
     return (
         <div className={little ? styles.componentLittle + " " + styles.blue : styles.component + " " + styles.blue}>
             <img 
@@ -9,8 +10,11 @@ export default function Blue({ handleClick, active, data, little }){
                 src={active == true ? ('/learning/Icons-Bookmark-blue.svg') : ('/learning/Icons-Bookmark.svg')} 
             />
             <img className={styles.flower} src="/pink-flowers.svg" alt="flowers" />
-            <div className={styles.imageContainer} style={{ backgroundImage: `url(${data.image})` }} />
-            <div className={styles.content}>
+            <div className={styles.imageContainer}>
+                <img className={styles.image} src={data.image} alt={data.title} />
+            </div>
+{/*             <div className={styles.imageContainer} style={{ backgroundImage: `url(${data.image})` }} />
+ */}            <div className={styles.content}>
                 <h3>{data.title}</h3>
                 <div className={styles.bottom}>
                     <img className={styles.iconPink} src="/Icons-Clock.svg" alt="time" />

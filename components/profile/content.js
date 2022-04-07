@@ -13,7 +13,7 @@ export default function Content() {
                 <Profile />
             </div>
             <div className={styles.learning}>
-                <LearningContent data={data} littles={true} width={8} />
+                <LearningContent data={data} width={8} />
             </div>
         </div>
 

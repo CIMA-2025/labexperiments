@@ -41,6 +41,15 @@ const categories = [
     },
 ]
 
+function Arrow({ className, style }) {
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: 'none'}}
+      />
+    )
+}
+
 export default function CategoriesContent() {
     const isIpad = useMediaQuery(1023);
 
@@ -54,6 +63,8 @@ export default function CategoriesContent() {
         autoplay: false,
         autoplaySpeed: 2000,
         pauseOnHover: true,
+        prevArrow: <Arrow />,
+        nextArrow: <Arrow />,
         responsive: [
           {
             breakpoint: 1024,
