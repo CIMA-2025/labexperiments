@@ -8,7 +8,7 @@ export default function CoverImage() {
             <img
                 src="cover-image.svg"
                 alt="imagen de portada"
-                className={styles.CoverImage}
+                style={{width: '100%'}}
             />
         </div>
 
