@@ -1,14 +1,14 @@
 import { useState } from "react";
+import Link from "next/link";
 import styles from "../index/styles/Content.module.css";
 import * as md from "react-icons/md";
 
 import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
 
 import { useMediaQuery } from "../../common";
 import Slider from "react-slick";
 
-import { Blue, Gray, White, Black } from "./components";
+import { GridTemplate } from "./components";
 
 
 function Arrow({ className, style }) {
@@ -73,47 +73,21 @@ export default function LearningContent({data, width = 16}) {
         <div className={styles.container}>
             <div className={styles.title}>
                 <h2>Experiencias de Aprendizaje</h2>
-                <a href="#" className={styles.seeMore}>
-                    Ver más
-                    <md.MdArrowForwardIos />
-                </a>
+                <Link href="/ea">
+                    <a href="#" className={styles.seeMore}>
+                        Ver más
+                        <md.MdArrowForwardIos />
+                    </a>
+                </Link>
             </div>
             <Box sx={{ flexGrow: 1 }}>
                 {!isIpad ? (
-                    <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: width }}>
-                        {data.map((data, index) => (
-                            <Grid item xs={2} sm={4} md={4} key={index}>
-                                {data.template === "gray" && (
-                                    <Gray
-                                        handleClick={handleClick}
-                                        active={active}
-                                        data={data}
-                                    />
-                                )}
-                                {data.template === "white" && (
-                                    <White
-                                        handleClick={handleClick}
-                                        active={active}
-                                        data={data}
-                                    />
-                                )}
-                                {data.template === "black" && (
-                                    <Black
-                                        handleClick={handleClick}
-                                        active={active}
-                                        data={data}
-                                    />
-                                )}
-                                {data.template === "blue" && (
-                                    <Blue
-                                        handleClick={handleClick}
-                                        active={active}
-                                        data={data}
-                                    />
-                                )}
-                            </Grid>
-                        ))}
-                    </Grid>
+                    <GridTemplate
+                        data={data}
+                        handleClick={handleClick}
+                        active={active}
+                        width={16}
+                    />
                 ) : (
                     <Slider {...settings} >
                         {data.map((data, index) => (

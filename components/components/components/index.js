@@ -5,6 +5,7 @@ import Gray from './Gray';
 import CarouselComponent from './CarouselComponent';
 import RecentlyViewed from './RecentlyViewed';
 import NextEvents from './NextEvents';
+import GridTemplate from './GridTemplate';
 
 export {
     Black,
@@ -13,5 +14,6 @@ export {
     Gray,
     RecentlyViewed,
     NextEvents,
-    CarouselComponent
+    CarouselComponent,
+    GridTemplate
 };

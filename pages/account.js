@@ -1,4 +1,3 @@
-import { LearningContent } from "../components/components";
 import { Navbar } from "../components/index";
 import { CoverImage, Content } from "../components/profile/index";
 
@@ -9,6 +8,5 @@ export default function Biographic() {
             <CoverImage />
             <Content />
         </>
-
     )
 }
