@@ -23,6 +23,7 @@
   justify-content: flex-start;
   align-items: flex-end;
   margin-top: 10px;
+  font-family: "Hind Madurai Bold";
 }
 
 .moreInfo svg {
@@ -50,10 +51,20 @@
   margin: 0;
   width: 80%;
   margin-top: 15%;
+  font-family: "Hind Madurai Bold";
 }
 
 .bio{
   margin: 0;
   margin-top: 10px;
   width: 80%;
+  font-family: "Hind Madurai Regular";
+}
+
+.content h3, .content a {
+  font-family: "Hind Madurai Bold";
+}
+
+.content p {
+  font-family: "Hind Madurai Regular";
 }

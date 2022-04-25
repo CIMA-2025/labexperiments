@@ -11,6 +11,7 @@ export const HtmlTooltip = styled(({ className, ...props }) => (
       borderRadius: 40,
       display: 'flex',
       flexDirection: 'column',
+      fontFamily: "Hind Madurai Medium",
       justifyContent: 'space-between',
       padding: '40px 30px',
       fontSize: theme.typography.pxToRem(12),

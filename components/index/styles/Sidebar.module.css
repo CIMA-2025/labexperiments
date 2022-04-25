@@ -17,6 +17,7 @@
   flex-direction: row;
   align-items: center;
   cursor: pointer;
+  font-family: "Hind Madurai Bold";
 }
 
 .sidebar .title img {
