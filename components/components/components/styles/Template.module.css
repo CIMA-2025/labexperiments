@@ -188,3 +188,22 @@
   left: 10px;
   width: 50px;
 }
+
+/*Tooltip*/
+.button {
+  background-color: #0000af;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 26px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.bottomToolTip{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 10px;
+  align-items: center;
+}
