@@ -10,7 +10,12 @@ import { GridTemplate } from "../components/components";
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 
+/*responsive */
+import { useMediaQuery } from "../../common";
+
 export default function Content({ width = 16 }){
+    const isIpad = useMediaQuery(1023);
+
     const [active, setActive] = useState(false);
     const [statusFilter, setStatusFilter] = useState('');
 
@@ -20,7 +25,7 @@ export default function Content({ width = 16 }){
 
     return (
         <div className={styles.content}>
-            <div className={styles.title}>
+            <div className={isIpad ? styles.titleResponsive : styles.title }>
                 <h1>Experiencias de Aprendizaje</h1>
                 <div className={styles.searchContainer}>
                     <md.MdSearch size={20}/>
