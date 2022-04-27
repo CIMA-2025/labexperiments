@@ -11,6 +11,10 @@ export default function Home() {
         <a href="/api/auth/login"><b>Login</b></a>
         <br />
         <a href="/api/shows"><b>Show</b></a>
+        <br />
+        <a href='/api/auth/me'><b>Me</b></a>
+        <br />
+        <a href='/api/auth/authenticate'><b>authenticate</b></a>
       </Head >
       <Navbar />
       <Sidebar />

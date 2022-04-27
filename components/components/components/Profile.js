@@ -1,11 +1,29 @@
 import styles from './styles/Profile.module.css'
-import { useUser } from '@auth0/nextjs-auth0';
+import { useUser, getAccessToken } from '@auth0/nextjs-auth0';
+import { useEffect } from 'react';
 
 export default function Profile() {
     const { user, error, isLoading } = useUser();
 
     if (isLoading) return <div>Loading...</div>;
     if (error) return <div>{error.message}</div>;
+
+    // const { token } = AccessTokenRequest();
+
+    /*const validateUser = async () => {
+        console.log(`token ${token}`)
+    }*/
+
+    async function MyHandler(req, res) {
+
+        console.log(`token ${accessToken}`)
+
+    }
+
+    useEffect(() => {
+        //validateUser()
+        MyHandler()
+    })
 
     return (
         user && (
