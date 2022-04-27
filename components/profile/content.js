@@ -1,7 +1,6 @@
-
 import styles from "./styles/content.module.css"
 import LearningContent from '../components/LearningContent'
-import  Profile  from "../components/components/Profile"
+import Profile from "../components/components/Profile"
 import { useMediaQuery } from "../../common"
 
 export default function Content() {
