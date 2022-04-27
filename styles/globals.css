@@ -1,8 +1,15 @@
 @font-face {
   font-family: 'Baskervville';
   font-style: normal;
-  font-weight: 400;
+  font-weight: normal;
   src: url("/fonts/Baskervville/Baskervville-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'Baskervville Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: url("/fonts/Baskervville/Baskervville-Bold.ttf");
 }
 
 @font-face {
@@ -40,13 +47,26 @@
   src: url("/fonts/Hind Madurai/HindMadurai-Bold.ttf");
 }
 
+@font-face {
+  font-family: 'FormaDJR Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: url("/fonts/FormaDJR/FormaDJRDeckBold.ttf");
+}
+
+@font-face {
+  font-family: 'FormaDJR Light';
+  font-style: normal;
+  font-weight: normal;
+  src: url("/fonts/FormaDJR/FormaDJRDeckLight.ttf");
+}
 
 html,
 body,
 #__next {
   padding: 0;
   margin: 0;
-  font-family: "Baskervville";
+  font-family: "Baskervville Bold";
   height: 100%;
   color: #222222;
   overflow-x: hidden;
