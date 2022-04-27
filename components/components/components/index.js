@@ -5,6 +5,8 @@ import Gray from './Gray';
 import CarouselComponent from './CarouselComponent';
 import RecentlyViewed from './RecentlyViewed';
 import NextEvents from './NextEvents';
+import GridTemplate from './GridTemplate';
+import { HtmlTooltip } from './HtmlToolTip';
 
 export {
     Black,
@@ -13,5 +15,7 @@ export {
     Gray,
     RecentlyViewed,
     NextEvents,
-    CarouselComponent
+    CarouselComponent,
+    GridTemplate,
+    HtmlTooltip
 };

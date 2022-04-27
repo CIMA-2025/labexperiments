@@ -22,6 +22,7 @@
   color: #004aff;
   font-weight: bold;
   font-size: 17px;
+  font-family: "Hind Madurai Bold";
 }
 
 .seeMore svg {
@@ -77,6 +78,7 @@
   margin: 0;
   font-size: 16px;
   color: #696A6D;
+  font-family: "Hind Madurai Medium";
 }
 
 /*Conferences*/

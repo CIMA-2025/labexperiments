@@ -1,10 +1,52 @@
+@font-face {
+  font-family: 'Baskervville';
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/Baskervville/Baskervville-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'Hind Madurai Light';
+  font-style: normal;
+  font-weight: normal;
+  src: url("/fonts/Hind Madurai/HindMadurai-Light.ttf");
+}
+
+@font-face {
+  font-family: 'Hind Madurai Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: url("/fonts/Hind Madurai/HindMadurai-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'Hind Madurai Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: url("/fonts/Hind Madurai/HindMadurai-Medium.ttf");
+}
+
+@font-face {
+  font-family: 'Hind Madurai SemiBold';
+  font-style: normal;
+  font-weight: normal;
+  src: url("/fonts/Hind Madurai/HindMadurai-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: 'Hind Madurai Bold';
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/Hind Madurai/HindMadurai-Bold.ttf");
+}
+
+
 html,
 body,
 #__next {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Baskervville";
   height: 100%;
   color: #222222;
   overflow-x: hidden;

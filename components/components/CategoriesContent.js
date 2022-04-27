@@ -124,7 +124,7 @@ export default function CategoriesContent() {
         </div>
     )
 }
-
+/* 
 function RightArrow({ className, style, onClick }) {
     return (
       <md.MdArrowForwardIos
@@ -142,4 +142,4 @@ function LeftArrow({ className, style, onClick }) {
         onClick={onClick}/>
     )
 }
-  
+   */
