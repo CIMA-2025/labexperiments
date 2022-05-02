@@ -8,6 +8,8 @@ export default function Profile() {
     const validateUser = async () => {
         const token = await getAccessTokenSilently()
         localStorage.setItem('token', token)
+        console.log(`${localStorage.getItem('token')}`)
+        console.loh(`email -> ${user.email}`)
     }
 
     useEffect(() => {
@@ -23,8 +25,8 @@ export default function Profile() {
                     className={styles.image}
                 />
                 <div className={styles.text}>
-                    <h1 className={styles.name}>{user.name}</h1>
-                    <p className={styles.bio}>{user.email}</p>
+                    <h1 className={styles.name}>user.name</h1>
+                    <p className={styles.bio}>user.email</p>
                 </div>
             </>
         )
