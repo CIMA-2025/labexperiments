@@ -1,32 +1,23 @@
 import styles from './styles/Profile.module.css'
-import { useUser, getAccessToken } from '@auth0/nextjs-auth0';
 import { useEffect } from 'react';
+import { useAuth0 } from '@auth0/auth0-react';
 
 export default function Profile() {
-    const { user, error, isLoading } = useUser();
+    const { user, isAuthenticade, isLoading, getAccessTokenSilently } = useAuth0()
 
-    if (isLoading) return <div>Loading...</div>;
-    if (error) return <div>{error.message}</div>;
-
-    // const { token } = AccessTokenRequest();
-
-    /*const validateUser = async () => {
-        console.log(`token ${token}`)
-    }*/
-
-    async function MyHandler(req, res) {
-
-        console.log(`token ${accessToken}`)
-
+    const validateUser = async () => {
+        const token = await getAccessTokenSilently()
+        localStorage.setItem('token', token)
+        console.log(`Token -> ${localStorage.getItem('token')}`)
+        console.log(`user-> ${user.email}`)
     }
 
     useEffect(() => {
-        //validateUser()
-        MyHandler()
+        validateUser()
     })
 
     return (
-        user && (
+        !isLoading && (
             <>
                 <img
                     src="profile.svg"
@@ -39,7 +30,5 @@ export default function Profile() {
                 </div>
             </>
         )
-
-
     )
 }
