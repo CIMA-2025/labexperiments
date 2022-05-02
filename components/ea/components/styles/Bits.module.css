@@ -1,0 +1,59 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.imageContainer {
+    padding: 15px;
+    border: solid 1px #707070;
+    border-radius: 23px;
+    position: relative;
+
+    margin-right: 20px;
+}
+
+.imageContainer .imageContent {
+    max-width: 120px;
+    min-width: 120px;
+
+    max-height: 120px;
+    min-height: 120px;
+}
+
+.imageContainer .bookmark {
+    position: absolute;
+    top: -6px;
+    right: 0;
+}
+
+.rightContainer h2 {
+    font-size: 24px;
+}
+
+.rightContainer p {
+    font-family: 'Hind Madurai Regular';
+    font-size: 14px;
+}
+
+.iconPink {
+    background-color: #fdaebe;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    padding: 3px;
+
+    margin-right: 8px;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'FormaDJR Bold';
+}
+  
+.bottom span {
+    font-size: 12px;
+}

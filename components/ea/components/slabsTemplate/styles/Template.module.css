@@ -2,29 +2,35 @@
 .component {
   width: 100%;
   height: 100%;
-}
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  max-height: 70%;
 
+}
+  
 .componentLittle {
   height: 100%;
   margin-left: 20px;
 }
-
+  
 .component, .componentLittle {
   border-radius: 40px;
   cursor: pointer;
   position: relative;
 }
-
+  
 .component:hover {
   filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.12));
 }
-
+  
 .component .image img, .componentLittle .image img {
   object-fit: contain;
   width: 100%;
 }
-
-/* INICIA General*/
+  
+  /* INICIA General*/
 .iconPink {
   background-color: #fdaebe;
   width: 25px;
@@ -32,43 +38,44 @@
   border-radius: 50%;
   padding: 3px;
 }
-
+  
 .componentLittle .iconPink {
   width: 20px;
   height: 20px;
 }
-
+  
 .bookmark {
   position: absolute;
   z-index: 1;
   top: -4px;
   right: 14px;
 }
-
-/*Tiempo y modulos*/
+  
+  /*Tiempo y modulos*/
 .bottom {
   display: flex;
   flex-direction: row;
   align-items: center;
   font-family: 'FormaDJR Bold';
-  margin-top: 10px;
-}
 
+  padding: 0px 15px 15px 15px;
+}
+  
 .bottom span {
   font-size: 13px;
 }
-
+  
 .bottom img {
   margin-right: 10px;
 }
-
+  
 .bottom div {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-/* TERMINA General*/
-
+  /* TERMINA General*/
+  
 .gray h3,
 .black h3,
 .blue h3 {
@@ -76,147 +83,156 @@
   margin: 0;
   padding: 0;
 }
-
+  
 .content {
   padding: 0px 15px 15px 15px;
+  text-align: center;
 }
 
+.content h3 {
+  font-size: 24px;
+}
+
+.content p {
+  font-family: 'Hind Madurai Regular';
+  font-size: 14px;
+}
+  
 .gray .image img, .white .image img {
   padding: 15px;
 }
-
-/*INICIA GRAY*/
+  
+  /*INICIA GRAY*/
 .gray {
   background-color: #f0f2f4;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
-
-.gray .image {
+  
+.gray .image, .white .image {
   width: 100%;
 }
-/*TERMINA GRAY*/
-
-/*INICIA WHITE*/
+  /*TERMINA GRAY*/
+  
+  /*INICIA WHITE*/
 .white {
   background-color: white;
   border: 1px solid #e4e4e4;
 }
-
+  
 .white .bottom {
   justify-content: space-between;
+  width: 100%;
 }
-
+  
 .white h3 {
   font-family: "Hind Madurai Bold";
 }
-/*TERMINA WHITE*/
-
-/*INICIA BLACK*/
+  /*TERMINA WHITE*/
+  
+  /*INICIA BLACK*/
 .black {
   background-color: #222222;
   color: white;
-
+  
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-between;
 }
-
+  
 .black .image {
   top: 0;
   left: 0;
   width: 100%;
 }
-
+  
 .black .bottom {
   justify-content: flex-end;
 }
-
+  
 .black .content p {
   margin: 0;
 }
-/*TERMINA BLACK*/
-
-/*INICIA BLUE*/
+  /*TERMINA BLACK*/
+  
+  /*INICIA BLUE*/
 .blue {
   background-color: #0000af;
   color: white;
-
+  
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
 }
-
+  
 .blue .flower {
   position: absolute;
-  bottom: 120px;
+  bottom: 80px;
   left: 30px;
   width: 80px;
 }
-
+  
 .blue .imageContainer {
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: flex-end;
 }
-
-.blue .imageContainer .image {
-  object-fit: cover;
-  width: 100%;
-}
-
-.blue .content {
-  width: 100%;
-}
-
-.blue .bottom {
-  justify-content: flex-end;
-}
-/*TERMINA BLUE*/
-
-
-/*Little*/
-.componentLittle .content{
-  font-size: 11px;
-}
-
-.componentLittle h3{
-  font-size: 14px;
-  margin: 0;
-  padding: 0;
-}
-
-
-.componentLittle .bookmark {
-  width: 40px;
-}
-
-.componentLittle.blue .flower {
-  position: absolute;
-  bottom: 70px;
-  left: 10px;
-  width: 50px;
-}
-
-/*Tooltip*/
-.button {
-  background-color: #0000af;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 26px;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.bottomToolTip{
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  margin-top: 10px;
-  align-items: center;
-}
+  
+  .blue .imageContainer .image {
+    object-fit: cover;
+    width: 100%;
+  }
+  
+  .blue .content {
+    width: 100%;
+  }
+  
+  .blue .bottom {
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 10px;
+  }
+  /*TERMINA BLUE*/
+  
+  
+  /*Little*/
+  .componentLittle .content{
+    font-size: 11px;
+  }
+  
+  .componentLittle h3{
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  .componentLittle .bookmark {
+    width: 40px;
+  }
+  
+  .componentLittle.blue .flower {
+    position: absolute;
+    bottom: 70px;
+    left: 10px;
+    width: 50px;
+  }
+  
+  /*Tooltip*/
+  .button {
+    background-color: #0000af;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 26px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .bottomToolTip{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 10px;
+    align-items: center;
+  }

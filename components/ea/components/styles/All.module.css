@@ -1,0 +1,29 @@
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title h3 {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Hind Madurai Bold";
+}
+
+.title .seeMore {
+    color: #004aff;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    justify-content: center;
+    font-size: 17px;
+    font-family: "Hind Madurai Bold";
+}
+  
+.title .seeMore svg {
+    margin-left: 5px;
+}
+
+.cards hr {
+    margin-top: 50px;
+}

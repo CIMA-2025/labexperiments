@@ -1,26 +1,56 @@
 import { useState } from "react";
-import Link from "next/link";
 import styles from "./styles/Content.module.css";
 import * as md from "react-icons/md";
 
-/*Grid*/
-import { GridTemplate } from "../components/components";
+/*content statusFilter */
+import { All, Bits, Slabs, Decks } from "./components";
 
 /*Filtering*/
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 
+/*tags */
+import Chip from '@mui/material/Chip';
+
 /*responsive */
 import { useMediaQuery } from "../../common";
+
+function Tags({ changeColor }) {
+    return (
+        <>
+            {/* TAGS */}
+            <Stack direction="row" spacing={5} sx={{
+                marginTop: "30px",
+                marginBottom: "40px",
+                '& span': {
+                    fontFamily: "FormaDJR Bold",
+                    fontSize: "12px",
+                    color: "#54565A",
+                }
+            }}>
+                <Chip label="Agilidad" onClick={changeColor} />
+                <Chip label="SCRUM" onClick={changeColor} />
+                <Chip label="Metodologías ágiles" onClick={changeColor} />
+                <Chip label="Marcos de Trabajo" onClick={changeColor} />
+            </Stack>
+        </>
+    )
+}
 
 export default function Content({ width = 16 }){
     const isIpad = useMediaQuery(1023);
 
     const [active, setActive] = useState(false);
-    const [statusFilter, setStatusFilter] = useState('');
+    //TODO change color when clicked
+    /* const [tag, setTag] = useState(false); */
+    const [statusFilter, setStatusFilter] = useState('all');
 
     const handleClick = () => {
         setActive(!active);
+    }
+
+    const changeColor = () => {
+
     }
 
     return (
@@ -35,7 +65,7 @@ export default function Content({ width = 16 }){
             <div className={styles.filters}>
                 <Stack spacing={2} direction="row">
                     <Button 
-                        sx={statusFilter === '' ?
+                        sx={statusFilter === 'all' ?
                             ({
                                 backgroundColor: '#0000AF',
                                 color: 'white',
@@ -54,13 +84,13 @@ export default function Content({ width = 16 }){
                         } 
                         variant="text"
                         onClick={() => {
-                            setStatusFilter('');
+                            setStatusFilter('all');
                         }}
                     >
                         Todos
                     </Button>
                     <Button 
-                        sx={statusFilter === 'pending' ?
+                        sx={statusFilter === 'bits' ?
                             ({
                                 backgroundColor: '#0000AF',
                                 color: 'white',
@@ -79,13 +109,13 @@ export default function Content({ width = 16 }){
                         } 
                         variant="text"
                         onClick={() => {
-                            setStatusFilter('pending');
+                            setStatusFilter('bits');
                         }}
                         >
                             Bits
                     </Button>
                     <Button 
-                        sx={statusFilter === 'in progress' ?
+                        sx={statusFilter === 'slabs' ?
                             ({
                                 backgroundColor: '#0000AF',
                                 color: 'white',
@@ -104,13 +134,13 @@ export default function Content({ width = 16 }){
                         } 
                         variant="text"
                         onClick={() => {
-                            setStatusFilter('in progress');
+                            setStatusFilter('slabs');
                         }}
                         >
                             Slabs
                     </Button>
                     <Button 
-                        sx={statusFilter === 'done' ?
+                        sx={statusFilter === 'decks' ?
                             ({
                                 backgroundColor: '#0000AF',
                                 color: 'white',
@@ -129,7 +159,7 @@ export default function Content({ width = 16 }){
                         } 
                         variant="text"
                         onClick={() => {
-                            setStatusFilter('done');
+                            setStatusFilter('decks');
                         }}
                         >
                             Decks
@@ -137,78 +167,62 @@ export default function Content({ width = 16 }){
                 </Stack>
             </div>
             {/* son todos los contenidos de EA */}
-            <div className={styles.cards}>
-                <div className={styles.title}>
-                    <h3>Vistos recientemente</h3>
-                    <Link href="/ea">
-                        <a href="#" className={styles.seeMore}>
-                            Ver más
-                            <md.MdArrowForwardIos />
-                        </a>
-                    </Link>
-                </div>
-                <GridTemplate
-                    data={data}
-                    width={width}
-                    active={active}
-                    handleClick={handleClick}
-                />
-                <hr/>
-            </div>
-            <div className={styles.cards}>
-                <div className={styles.title}>
-                    <h3>Destacados</h3>
-                    <Link href="/ea">
-                        <a href="#" className={styles.seeMore}>
-                            Ver más
-                            <md.MdArrowForwardIos />
-                        </a>
-                    </Link>
-                </div>
-                <GridTemplate
-                    data={data}
-                    width={width}
-                    active={active}
-                    handleClick={handleClick}
-                />
-                <hr/>
-            </div>
-            <div className={styles.cards}>
-                <div className={styles.title}>
-                    <h3>Trending</h3>
-                    <Link href="/ea">
-                        <a href="#" className={styles.seeMore}>
-                            Ver más
-                            <md.MdArrowForwardIos />
-                        </a>
-                    </Link>
-                </div>
-                <GridTemplate
-                    data={data}
-                    width={width}
-                    active={active}
-                    handleClick={handleClick}
-                />
-                <hr/>
-            </div>
-            <div className={styles.cards}>
-                <div className={styles.title}>
-                    <h3>Rating</h3>
-                    <Link href="/ea">
-                        <a href="#" className={styles.seeMore}>
-                            Ver más
-                            <md.MdArrowForwardIos />
-                        </a>
-                    </Link>
-                </div>
-                <GridTemplate
-                    data={data}
-                    width={width}
-                    active={active}
-                    handleClick={handleClick}
-                />
-                <hr/>
-            </div>
+            {statusFilter === 'all' ? 
+                (
+                    <All 
+                        data={data}
+                        active={active}
+                        handleClick={handleClick}
+                        width={width}
+                    />
+                ) : 
+                ("")
+            }
+            {/* son los bits */}
+            {statusFilter === 'bits' ?
+                (
+                    <>
+                        <Tags changeColor={changeColor}/>
+                        <Bits
+                            data={data}
+                            active={active}
+                            handleClick={handleClick}
+                            width={width}
+                        />  
+                    </>
+                ) :
+                ("")
+            }
+            {/* son los slabs */}
+            {statusFilter === 'slabs' ?
+                (
+                    <>
+                        <Tags changeColor={changeColor}/>
+                        <Slabs
+                            data={data}
+                            active={active}
+                            handleClick={handleClick}
+                            width={width}
+                        />
+                    </>
+                ) :
+                ("")
+            }
+            {/* son los decks */}
+            {statusFilter === 'decks' ?
+                (
+                    <>
+                        <Tags changeColor={changeColor}/>
+                        <Decks
+                            data={data}
+                            active={active}
+                            handleClick={handleClick}
+                            width={width}
+                        />
+                    </>
+                ) :
+                ("")
+            }
         </div>
     )
 }
@@ -217,12 +231,14 @@ const data = [
     {
         template: 'gray',
         title: "Fundamentos de Scrum",
+        description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.",
         time: "8 min",
         image: "/learning/gray.svg",
     },
     {
         template: 'white',
         title: "Conceptos básicos del marketing digital",
+        description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.",
         modules: "16",
         time: "8 min",
         image: "/learning/white.svg",
@@ -237,6 +253,7 @@ const data = [
     {
         template: 'blue',
         title: "Fundamentos de Scrum",
+        description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.",
         time: "8 hrs",
         image: "/learning/blue.svg",
     },

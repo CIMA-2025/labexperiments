@@ -20,7 +20,7 @@ export default function Black({ handleClick, active, data, little }){
                         className={styles.bookmark} 
                         onClick={handleClick} 
                         src={active == true ? ('/learning/Icons-Bookmark-blue.svg') : ('/learning/Icons-Bookmark.svg')} 
-                />
+                    />
                     <div className={styles.image}>
                         <img src={data.image} alt={data.title} />
                     </div>
